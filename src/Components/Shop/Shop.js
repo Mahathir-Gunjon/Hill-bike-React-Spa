@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Bikes from '../Bikes/Bikes';
 import './Shop.css';
 
 const Shop = () => {
 
     const [bikes, setBikes] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setBikes(data))
     }, []);
+
+    const addToCart = (bike) => {
+        const newCart = [...cart, bike];
+        setCart(newCart)
+    }
 
     return (
         <div>
@@ -24,8 +31,12 @@ const Shop = () => {
                         bikes.map(bike => <Bikes
                             bike={bike}
                             key={bike.id}
+                            addToCart={addToCart}
                         ></Bikes>)
                     }
+                </div>
+                <div className="cart-container">
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>
