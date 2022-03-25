@@ -7,7 +7,7 @@ const Bikes = (props) => {
 
     return (
         <div >
-            <div className="card border-0 shadow">
+            <div className="card border-0 shadow rounded-3">
                 <img src={picture} className="card-img-top fit-img img-fluid" alt="" />
                 <div className="card-body">
                     <h5 className="card-title">{cycle}</h5>
