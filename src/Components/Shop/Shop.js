@@ -22,7 +22,7 @@ const Shop = () => {
     return (
         <div className='mt-5'>
             <div className="text-center py-5">
-                <h1>Hill Bikes</h1>
+                <h1 className='display-4 fw-bold head-text'>Hill Bikes</h1>
                 <p>take you to the next level of adventure</p>
             </div>
             <div className='shop-container'>

@@ -1,3 +1,15 @@
+.head-text{
+    background: #DB9603;
+background: linear-gradient(to bottom, #ff0019 0%,#000000 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+.btn-color{
+    color: rgb(0, 0, 0);
+    background-color: aquamarine;
+}
+
 .shop-container{
     display: grid;
     gap: 20px;
@@ -8,3 +20,13 @@
     gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+@media screen and (max-width: 500px){
+    .shop-container{
+        display: block;
+        order: 2;
+    }
+    .cart-container{
+        order: 0;
+    }
+}
+    
