@@ -19,8 +19,7 @@ const Shop = () => {
         setCart(newCart)
     }
     const removeToCart = () => {
-        const newCart = [];
-        setCart(newCart)
+        setCart([]);
     }
 
     return (
@@ -28,7 +27,7 @@ const Shop = () => {
             <div className="text-center py-5">
                 <h1 className='display-4 fw-bold text-dark'>Hill Bikes</h1>
                 <h1><i class="fa-regular fa-cart-plus"></i></h1>
-                <p className='text-muted fs-5'>take you to the next level of adventure</p>
+                <p className='text-muted fs-5'>Take you to the next level of adventure</p>
             </div>
             <div className='shop-container'>
                 <div className="card-container container">
@@ -37,13 +36,13 @@ const Shop = () => {
                             bike={bike}
                             key={bike.id}
                             addToCart={addToCart}
-                            removeToCart={removeToCart}
                         ></Bikes>)
                     }
                 </div>
                 <div className="cart-container">
                     <Cart
                         cart={cart}
+                        removeToCart={removeToCart}
                     ></Cart>
                 </div>
             </div>

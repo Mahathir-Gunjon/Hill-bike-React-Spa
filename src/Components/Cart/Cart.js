@@ -1,10 +1,9 @@
 import React from 'react';
-// import Bikes from '../Bikes/Bikes';
 import { HiTrash } from "react-icons/hi";
 import './Cart.css';
 
-const Cart = ({ cart }) => {
-
+const Cart = ({ cart, removeToCart }) => {
+    // alert for more then 4 items
     const errorMsg = "You can't add more than 4 items to the cart."
     if (cart.length > 4) {
         alert(errorMsg)
@@ -14,7 +13,7 @@ const Cart = ({ cart }) => {
     //     const randomCart = cart[Math.floor(Math.random() * cart.length)];
     //     setRandom(randomCart);
     // }
-    
+    // return cart data
     return (
         <div className='container text-dark fixed-cart bg-danger p-3 rounded-3'>
             <div>
@@ -40,9 +39,12 @@ const Cart = ({ cart }) => {
                     )
                     
                 }
+                {/* random and reset */}
                 <div className="d-flex pt-3">
                     <div className="mx-2">
-                    <button onClick={() => cart.removeToCart(cart.bike)} className='btn btn-outline-light'>Reset Cart {' '}</button>
+                    <button onClick={removeToCart} className='btn btn-outline-light'>
+                        Reset Cart {' '}
+                        </button>
                     </div>
                     <div className="mx-2">
                     <button className='btn btn-outline-light'>Chose One</button>

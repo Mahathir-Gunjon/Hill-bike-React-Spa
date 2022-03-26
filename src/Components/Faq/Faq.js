@@ -5,6 +5,7 @@ const Faq = () => {
         <div>
             <div className="accordion container py-5" id="accordionPanelsStayOpenExample">
                 <h3 className='display-5 fw-bold text-dark text-center my-5'>Frequently Asked Question</h3>
+                {/* react work */}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingOne">
                         <button className="accordion-button btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -19,6 +20,7 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
+                {/* How useState works */}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
                         <button className="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -33,6 +35,7 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
+                {/* Difference between State and Props */}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
                         <button className="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">

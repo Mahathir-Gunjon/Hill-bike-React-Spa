@@ -3,9 +3,9 @@ import { HiShoppingCart } from "react-icons/hi";
 import './Bikes.css';
 
 const Bikes = (props) => {
-
+    // destructuring props
     const { cycle, picture, price } = props.bike;
-
+    // show data to ui
     return (
         <div >
             <div className="card border-0 shadow rounded-3">
