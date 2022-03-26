@@ -12,7 +12,9 @@ const Bikes = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{cycle}</h5>
                     <p className="card-text">${price}</p>
-                    <button onClick={() => props.addToCart(props.bike)} className='btn btn-danger shadow'>Add to cart
+                    <button onClick={() => props.addToCart(props.bike)} className='btn btn-danger shadow'>
+                        Add to cart
+                        <i className="fas fa-shopping-cart "></i>
                     </button>
                 </div>
             </div>
