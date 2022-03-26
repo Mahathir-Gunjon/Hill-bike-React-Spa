@@ -33,6 +33,21 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button className="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <h4>Difference between State and Props</h4>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div className="accordion-body">
+                            <strong>useState</strong> is Associate in Nursing updatable structure that's wont to contain information or info concerning the element and might modification over time. The modification in state will happen as a response to user action or system event. it's the center of the react element that determines the behavior of the element and the way it'll render. A state should be unbroken as easy as doable. It represents the component's native state or info. It will solely be accessed or changed within the element or by the element directly.
+                            <br />
+                            <br />
+                            <strong>Props</strong> are read-only parts. it's associate object that stores the worth of attributes of a tag and work just like the HTML attributes. It permits passing knowledge from one element to alternative parts. it's just like operate arguments and may be passed to the element an equivalent manner as arguments passed during a operate. Props ar changeless therefore we have a tendency to cannot modify the props from within the element.
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

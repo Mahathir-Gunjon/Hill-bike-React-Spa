@@ -4,9 +4,6 @@ import { HiTrash } from "react-icons/hi";
 import './Cart.css';
 
 const Cart = ({ cart }) => {
-    // const [setRandom] = useState([]);
-
-    // const [noCart , setNoCart] = useState([]);
 
     const errorMsg = "You can't add more than 4 items to the cart."
     if (cart.length > 4) {
@@ -48,7 +45,7 @@ const Cart = ({ cart }) => {
                     <button onClick={() => cart.removeToCart(cart.bike)} className='btn btn-outline-light'>Reset Cart {' '}</button>
                     </div>
                     <div className="mx-2">
-                    {/* <button onClick={() => randomItem(console.log('fwesf'))} className='btn btn-outline-light'>Chose One</button> */}
+                    <button className='btn btn-outline-light'>Chose One</button>
                     </div>
                 </div>
             </div>
