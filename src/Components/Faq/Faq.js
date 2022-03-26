@@ -3,12 +3,12 @@ import React from 'react';
 const Faq = () => {
     return (
         <div>
-            <div className="accordion container-fluid w-50 py-5" id="accordionPanelsStayOpenExample">
+            <div className="accordion container py-5" id="accordionPanelsStayOpenExample">
                 <h3 className='display-5 fw-bold text-dark text-center my-5'>Frequently Asked Question</h3>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingOne">
                         <button className="accordion-button btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            How React works?
+                            <h4>How React works?</h4>
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
@@ -22,12 +22,14 @@ const Faq = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
                         <button className="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            Accordion Item #2
+                            <h4>How useState works?</h4>
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                         <div className="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <strong>useState</strong> could be a Hook that permits you to possess state variables in practical parts. You pass the initial state the present operate and it returns a variable with the current state worth and another operate to update this worth.
+                            <br />
+                            First count variable is initialized with a random variety employing a random operate and setRandomCount is employed for change the state of the count. when we tend to click on the button onClick it calls the clickHandler operate that sets the count variable once more with a random variety.
                         </div>
                     </div>
                 </div>

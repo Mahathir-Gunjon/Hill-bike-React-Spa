@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Bikes from '../Bikes/Bikes';
 import './Shop.css';
-import Faq from '../Faq/Faq';
 
 const Shop = () => {
 
     const [bikes, setBikes] = useState([]);
     const [cart, setCart] = useState([]);
-    const [random, setRamdom] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -20,11 +18,9 @@ const Shop = () => {
         const newCart = [...cart, bike];
         setCart(newCart)
     }
-
-    const randomChosenBike = () => {
-        const bikes = random[Math.floor(Math.random() * random.length)];
-        setRamdom(bikes);
-
+    const removeToCart = () => {
+        const newCart = [];
+        setCart(newCart)
     }
 
     return (
@@ -41,17 +37,16 @@ const Shop = () => {
                             bike={bike}
                             key={bike.id}
                             addToCart={addToCart}
+                            removeToCart={removeToCart}
                         ></Bikes>)
                     }
                 </div>
                 <div className="cart-container">
                     <Cart
                         cart={cart}
-                        randomChosenBike={randomChosenBike}
                     ></Cart>
                 </div>
             </div>
-            <Faq></Faq>
         </div>
     );
 };

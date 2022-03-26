@@ -1,20 +1,22 @@
 import React from 'react';
-import Bikes from '../Bikes/Bikes';
+// import Bikes from '../Bikes/Bikes';
+import { HiTrash } from "react-icons/hi";
 import './Cart.css';
 
-const Cart = ({ cart, randomChosenBike }) => {
+const Cart = ({ cart }) => {
+    // const [setRandom] = useState([]);
+
+    // const [noCart , setNoCart] = useState([]);
 
     const errorMsg = "You can't add more than 4 items to the cart."
     if (cart.length > 4) {
-        return (
-            <div className="cart-container">
-                <h2>Your Cart is full</h2>
-                <div className="cart-error">
-                    <p>{errorMsg}</p>
-                </div>
-            </div>
-        )
+        alert(errorMsg)
     }
+    
+    // const randomItem = () =>{
+    //     const randomCart = cart[Math.floor(Math.random() * cart.length)];
+    //     setRandom(randomCart);
+    // }
     
     return (
         <div className='container text-dark fixed-cart bg-danger p-3 rounded-3'>
@@ -22,19 +24,20 @@ const Cart = ({ cart, randomChosenBike }) => {
                 <h3 className='text-center fw-bold text-white mb-3'>Your Cart</h3>
                 {
                     cart.map(bike =>
-                        <div className="d-flex bd-highlight cart-item my-2">
+                        <div className="d-flex bd-highlight cart-item my-2 text-white">
                             <div class="p-2 w-100 bd-highlight">
                                 <div className="d-flex">
                                     <div>
                                         <img className='img-fluid card-img' src={bike.picture} alt="" />
                                     </div>
-                                    <div>
-                                        <h5 className="card-title ms-3">{bike.cycle}</h5>
+                                    <div className='ms-3'>
+                                        <h5 className="card-title fw-normal">{bike.cycle}</h5>
+                                        <p className="text-lite">Price: ${bike.price}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-2 flex-shrink-1 bd-highlight">
-                                <button onClick='' className='btn btn-close'></button>
+                            <div className="p-2 flex-shrink-1 bd-highlight">
+                                <button className='btn btn-outline-light rounded-circle fs-6'><HiTrash/></button>
                             </div>
                         </div>
                     )
@@ -42,10 +45,10 @@ const Cart = ({ cart, randomChosenBike }) => {
                 }
                 <div className="d-flex pt-3">
                     <div className="mx-2">
-                    <button onClick='' className='btn btn-outline-light'>Reset Cart</button>
+                    <button onClick={() => cart.removeToCart(cart.bike)} className='btn btn-outline-light'>Reset Cart {' '}</button>
                     </div>
                     <div className="mx-2">
-                    <button onClick={() => randomChosenBike(Bikes)} className='btn btn-outline-light'>Chose One</button>
+                    {/* <button onClick={() => randomItem(console.log('fwesf'))} className='btn btn-outline-light'>Chose One</button> */}
                     </div>
                 </div>
             </div>
